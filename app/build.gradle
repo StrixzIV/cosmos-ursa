@@ -4,6 +4,10 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 26
     buildToolsVersion "26.0.2"
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
     defaultConfig {
         applicationId "jp.jaxa.iss.kibo.rpc.defaultapk" +
                 ""
@@ -50,4 +54,5 @@ dependencies {
     }
     testCompile 'junit:junit:4.12'
     compile 'com.quickbirdstudios:opencv:3.4.4-contrib'
+    implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
 }
